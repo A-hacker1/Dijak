@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+   
+        nav {
+            background: gray;
+            height: 80px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-container img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+        label.logo {
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        nav ul {
+            display: flex;
+            margin-right: 20px;
+        }
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+        nav ul li a {
+            color: white;
+            font-size: 17px;
+            text-transform: uppercase;
+            border-radius: 3px;
+            padding: 5px 10px;
+        }
+        a:hover {
+            background: white;
+            color: #0082e6;
+            transition: .5s;
+        }
+        .checkbtn {
+            font-size: 30px;
+            color: white;
+            display: none;
+            cursor: pointer;
+        }
+        #check {
+            display: none;
+        }
+        @media (max-width: 952px) {
+            label.logo {
+                font-size: 30px;
+            }
+            nav ul li a {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 852px) {
+            .checkbtn {
+                display: block;
+            }
+            nav ul {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #2c3e50;
+                top: 80px;
+                left: -100%;
+                transition: all .5s;
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                display: block;
+                line-height: 30px;
+                margin: 50px 0;
+            }
+            nav ul li a {
+                font-size: 20px;
+            }
+            #check:checked ~ ul {
+                left: 0;
+            }
+        }
+    footer {
+    background-color:gray;
+    padding: 20px;
+    text-align: center;
+    clear:both;
+    max-width:800px;
+    margin:0 auto;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333;
+    margin: 5px;
+    font-size: 14px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+  footer p {
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+}
+/* styles_community.css */
+
+/* Main Community Section */
+main {
+    padding: 20px;
+}
+
+.community {
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.community-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.community-intro h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.community-intro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.community-offerings,
+.community-involvement {
+    margin-bottom: 30px;
+}
+
+.community-offerings h2,
+.community-involvement h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.community-offerings ul,
+.community-involvement ul {
+    list-style: none;
+    padding: 0;
+}
+
+.community-offerings li,
+.community-involvement li {
+    margin-bottom: 15px;
+}
+
+.community-offerings h3,
+.community-involvement h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.community-offerings p,
+.community-involvement p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Index.html">
+                <div class="logo-container">
+                    <img src="logo.png" alt="logo">
+                    <label class="logo">VERIXO</label>
+                </div>
+            </a>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">&#9776;</label>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="signin.html">Login</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+ <main>
+    <section class="community">
+        <div class="community-intro">
+            <h1>Welcome to Our Community</h1>
+            <p>At Verixo, our community is at the heart of everything we do. Join us to connect, collaborate, and grow together.</p>
+        </div>
+
+        <div class="community-offerings">
+            <h2>What We Offer</h2>
+            <ul>
+                <li>
+                    <h3>Engaging Discussions</h3>
+                    <p>Join our forums and participate in lively discussions on product insights and industry trends.</p>
+                </li>
+                <li>
+                    <h3>Networking Opportunities</h3>
+                    <p>Expand your professional network by connecting with industry experts and like-minded individuals.</p>
+                </li>
+                <li>
+                    <h3>Exclusive Events</h3>
+                    <p>Stay updated on our webinars, workshops, and meetups designed to empower our community.</p>
+                </li>
+                <li>
+                    <h3>Support and Feedback</h3>
+                    <p>Your feedback matters. Engage with us and fellow members to share your thoughts and suggestions.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="community-involvement">
+            <h2>How to Get Involved</h2>
+            <ul>
+                <li>
+                    <h3>Join the Conversation</h3>
+                    <p>Register to become a member. Share experiences, ask questions, and contribute to discussions.</p>
+                </li>
+                <li>
+                    <h3>Contribute Content</h3>
+                    <p>Write for our blog or participate in guest speaking opportunities at our events.</p>
+                </li>
+                <li>
+                    <h3>Stay Informed</h3>
+                    <p>Follow us on social media and subscribe to our newsletter for community news and event updates.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+</main>
+    <!-- Your main content section goes here -->
+
+    <footer>
+       <div class="font" style="font-size:30px;padding:10px;"> <a href="community.html">Community</a><br>
+        <a href="terms.html">Terms And Uses</a><br>
+        <a href="policy.html">Privacy Policy</a><br>
+        <a href="contact.html">Contact Us</a><br></div>
+      <div class="fo" style="font-size:10px;"> ©All Right Reserve
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VERIXO - Terms and Conditions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            padding: 20px;
+            line-height: 1.6;
+            margin: 0;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 28px;
+            color: #0044cc;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            margin: 0;
+        }
+        .terms-section {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 22px;
+            color: #0044cc;
+            margin-bottom: 15px;
+        }
+        /* Header styles */
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+   
+        nav {
+            background: gray;
+            height: 80px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-container img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+        label.logo {
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        nav ul {
+            display: flex;
+            margin-right: 20px;
+        }
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+        nav ul li a {
+            color: white;
+            font-size: 17px;
+            text-transform: uppercase;
+            border-radius: 3px;
+            padding: 5px 10px;
+        }
+        a:hover {
+            background: white;
+            color: #0082e6;
+            transition: .5s;
+        }
+        .checkbtn {
+            font-size: 30px;
+            color: white;
+            display: none;
+            cursor: pointer;
+        }
+        #check {
+            display: none;
+        }
+        @media (max-width: 952px) {
+            label.logo {
+                font-size: 30px;
+            }
+            nav ul li a {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 852px) {
+            .checkbtn {
+                display: block;
+            }
+            nav ul {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #2c3e50;
+                top: 80px;
+                left: -100%;
+                transition: all .5s;
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                display: block;
+                line-height: 30px;
+                margin: 50px 0;
+            }
+            nav ul li a {
+                font-size: 20px;
+            }
+            #check:checked ~ ul {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Index.html">
+                <div class="logo-container">
+                    <img src="logo.png" alt="logo">
+                    <label class="logo">VERIXO</label>
+                </div>
+            </a>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">&#9776;</label>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="signin.html">Login</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <h1>Terms and Conditions</h1>
+        <p>Last updated: [Insert date]</p>
+    </header>
+    <div class="terms-section">
+        <h2>Introduction</h2>
+        <p>Welcome to VERIXO. These terms and conditions outline the rules and regulations for the use of VERIXO's Website and Services.</p>
+    </div>
+    <div class="terms-section">
+        <h2>Acceptance of Terms</h2>
+        <p>By accessing or using our website and services, you agree to comply with and be bound by these terms and conditions. If you disagree with any part of these terms, you must not use our website or services.</p>
+    </div>
+    <div class="terms-section">
+        <h2>Changes to Terms</h2>
+        <p>VERIXO reserves the right to modify these terms and conditions at any time. We will notify you of any changes by posting the new terms on this page. Your continued use of the website after such changes constitutes your acceptance of the new terms.</p>
+    </div>
+    <div class="terms-section">
+        <h2>Use of Our Services</h2>
+        <p>You agree to use our services only for lawful purposes and in accordance with these terms and conditions. You must not use our services in any way that may harm VERIXO or any other person or entity.</p>
+    </div>
+    <div class="terms-section">
+        <h2>Intellectual Property</h2>
+        <p>All content on our website, including text, graphics, logos, and images, is the property of VERIXO or its content suppliers and is protected by international copyright laws. You may not reproduce, distribute, or create derivative works from our content without our explicit permission.</p>
+    </div>
+    <div class="terms-section">
+        <h2>Limitation of Liability</h2>
+        <p>VERIXO shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising out of your use of our services or any content provided by VERIXO.</p>
+    </div>
+    <div class="terms-section">
+        <h2>Governing Law</h2>
+        <p>These terms and conditions are governed by and construed in accordance with the laws of [Your Country/State], and you irrevocably submit to the exclusive jurisdiction of the courts in that location.</p>
+    </div>
+    <div class="terms-section">
+        <h2>Termination</h2>
+        <p>We reserve the right to terminate or suspend your access to our services at any time, without notice, for conduct that we believe violates these terms and conditions or is harmful to other users of our website, us, or third parties.</p>
+    </div>
+    <div class="terms-section">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or concerns about these terms and conditions, please contact us at [Insert contact email].</p>
+    </div>
+    <footer>
+        <p>These Terms and Conditions are effective as of [Insert effective date].</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000000;
+            font-family: 'Arial', sans-serif;
+            color: #ffffff;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            max-width: 500px;
+            width: 100%;
+        }
+        .title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .message {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .input-container {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+        input[type="submit"] {
+            padding: 12px 25px;
+            border-radius: 5px;
+            border: none;
+            background-color: #00bfff;
+            color: #ffffff;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #0088cc;
+            transform: scale(1.05);
+        }
+        input[type="submit"]:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Email Verification</div>
+        <div class="message">A 6-digit code will be sent to your email within 24 hours. The code will be valid for 24 hours once received.</div>
+        <div class="message">Please enter the code below after you receive it:</div>
+        <div class="input-container">
+            <form action="success.html" method="get">
+                <input type="text" name="verification_code" placeholder="Enter 6-digit code" pattern="\d{6}" required>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

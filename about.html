@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+   
+        nav {
+            background: gray;
+            height: 80px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-container img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+        label.logo {
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        nav ul {
+            display: flex;
+            margin-right: 20px;
+        }
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+        nav ul li a {
+            color: white;
+            font-size: 17px;
+            text-transform: uppercase;
+            border-radius: 3px;
+            padding: 5px 10px;
+        }
+        a:hover {
+            background: white;
+            color: #0082e6;
+            transition: .5s;
+        }
+        .checkbtn {
+            font-size: 30px;
+            color: white;
+            display: none;
+            cursor: pointer;
+        }
+        #check {
+            display: none;
+        }
+        @media (max-width: 952px) {
+            label.logo {
+                font-size: 30px;
+            }
+            nav ul li a {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 852px) {
+            .checkbtn {
+                display: block;
+            }
+            nav ul {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #2c3e50;
+                top: 80px;
+                left: -100%;
+                transition: all .5s;
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                display: block;
+                line-height: 30px;
+                margin: 50px 0;
+            }
+            nav ul li a {
+                font-size: 20px;
+            }
+            #check:checked ~ ul {
+                left: 0;
+            }
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color:#ffffffda;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: justify;
+        }
+        main h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        main h2 {
+            font-size: 24px;
+            color: #1abc9c;
+            margin: 20px 0 10px;
+        }
+        main p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        main a {
+            color: #1abc9c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main a:hover {
+            text-decoration: underline;
+        }
+    footer {
+    background-color:gray;
+    padding: 20px;
+    text-align: center;
+    clear:both;
+    max-width:800px;
+    margin:0 auto;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333;
+    margin: 5px;
+    font-size: 14px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+  footer p {
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Index.html">
+                <div class="logo-container">
+                    <img src="logo.png" alt="logo">
+                    <label class="logo">VERIXO</label>
+                </div>
+            </a>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">&#9776;</label>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="signin.html">Login</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+        <h1>About Verixo</h1>
+        <p>Welcome to Verixo, your trusted platform for earning money by watching ads. Founded with the mission to create a rewarding and engaging advertising experience, Verixo bridges the gap between advertisers and viewers in a unique and mutually beneficial way.</p>
+        
+        <h2>Our Vision</h2>
+        <p>At Verixo, we envision a world where advertising is not just a means to promote products, but a way to empower individuals by providing them with opportunities to earn money. We strive to make advertising more engaging and effective by ensuring that viewers are rewarded for their time and attention.</p>
+        
+        <h2>Our Mission</h2>
+        <p>Our mission is to create a win-win scenario for both advertisers and viewers. We aim to deliver relevant and targeted advertisements to our users, making the viewing experience enjoyable and beneficial. For advertisers, we provide a platform that ensures their messages reach the right audience, enhancing the effectiveness of their campaigns.</p>
+        
+        <h2>Why Choose Verixo?</h2>
+        <p>Simple and User-Friendly: Our platform is designed to be straightforward and easy to use. Signing up is quick, and you can start earning money immediately by watching ads tailored to your interests.</p>
+        <p>Flexible Earning: Whether you have a few minutes or a few hours, you can watch ads and earn money at your convenience. There are no strict schedules or commitments.</p>
+        <p>Secure and Private: We prioritize your security and privacy. Your personal information is protected with advanced security measures, ensuring a safe and trustworthy platform.</p>
+        <p>Efficient Payments: We ensure that your earnings are processed and transferred to your account promptly, without unnecessary delays.</p>
+        
+        <h2>Join Us Today</h2>
+        <p>Join Verixo and be a part of the future of online earning. Whether you're looking to supplement your income, save for a goal, or simply make the most of your free time, Verixo offers a flexible and rewarding way to achieve your financial objectives. Sign up today and start earning with Verixo!</p>
+</main>
+    <footer>
+       <div class="font" style="font-size:30px;padding:10px;"> <a href="community.html">Community</a><br>
+        <a href="terms.html">Terms And Uses</a><br>
+        <a href="policy.html">Privacy Policy</a><br>
+        <a href="contact.html">Contact Us</a><br></div>
+      <div class="fo" style="font-size:10px;"> ©All Right Reserve
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Activation</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #1f1f1f, #121212); /* Black gradient background */
+            color: white; /* Default text color to white */
+        }
+
+        .container {
+            text-align: center;
+            border: 2px solid #ff4d4d; /* Light red border */
+            padding: 40px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Box shadow for depth */
+            backdrop-filter: blur(10px); /* Blurring effect */
+        }
+
+        .error {
+            color: #ff4d4d; /* Light red color for error messages */
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .material-symbols-outlined {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="message"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const messageDiv = document.getElementById('message');
+            let errorCount = 0;
+            const errors = [
+                'Data Error...',
+                'Profile Error...',
+                'Activation Error...'
+            ];
+
+            function displayError() {
+                if (errorCount < 3) {
+                    const errorMessage = document.createElement('p');
+                    errorMessage.classList.add('error');
+                    errorMessage.innerHTML = `<span class="material-symbols-outlined"></span>${errors[errorCount]}`;
+                    messageDiv.appendChild(errorMessage);
+                    errorCount++;
+                    setTimeout(displayError, 1000); // Display the next error after 1 second
+                } else {
+                    messageDiv.innerHTML += '<p class="error"><span class="material-symbols-outlined"></span>Your Account is not Activated. To View Ads; First You Have To Activate Your Account.</p>';
+                }
+            }
+
+            displayError();
+        });
+    </script>
+</body>
+</html>

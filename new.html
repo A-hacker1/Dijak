@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            margin-right: 10px;
+            border-radius: 50%; /* Make the logo rounded */
+        }
+
+        .site-name h3 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .menu-toggle {
+            display: none; /* Initially hide for larger screens */
+        }
+
+        .menu-toggle .material-icons {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Menu Container styles */
+        .menu-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 60%;
+            background-color: #808080;
+            transform: translateX(-100%);
+            transition: transform 0.4s ease;
+            z-index: 1000;
+            overflow-y: auto; /* Enable scrolling if needed */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-container.open {
+            transform: translateX(0);
+        }
+
+        nav {
+            padding: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #00bcd4;
+        }
+
+        .material-icons {
+            font-family: 'Material Icons', sans-serif;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 768px) {
+            .site-name {
+                display: none; /* Hide site name on smaller screens */
+            }
+
+            .menu-toggle {
+                display: block; /* Show menu toggle button */
+            }
+
+            .menu-container {
+                width: 100%; /* Full width for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="site-name">
+            <h3>VERIXO</h3>
+        </div>
+        <div class="menu-toggle" onclick="toggleNav()">
+            <span class="material-icons">menu_open</span>
+        </div>
+    </header>
+
+    <div class="menu-container" id="menuContainer">
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Watch Ads</a></li>
+                <li><a href="#">My Earning</a></li>
+                <li><a href="#">Withdraw/Cashout</a></li>
+                <li><a href="#">Activate My Account</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Create New Account</a></li>
+                <li><a href="#">Some Questions</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Your main content goes here -->
+
+    <script>
+        function toggleNav() {
+            var menuContainer = document.getElementById("menuContainer");
+            menuContainer.classList.toggle("open");
+        }
+    </script>
+</body>
+</html>

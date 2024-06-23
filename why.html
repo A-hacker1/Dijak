@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home: VERIXO</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+         * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+   
+        nav {
+            background: gray;
+            height: 80px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:0 20px;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-container img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+        label.logo {
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        nav ul {
+            display: flex;
+            margin-right: 20px;
+        }
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+        nav ul li a {
+            color: white;
+            font-size: 17px;
+            text-transform: uppercase;
+            border-radius: 3px;
+            padding: 5px 10px;
+        }
+        a:hover {
+            background: white;
+            color: #0082e6;
+            transition: .5s;
+        }
+        .checkbtn {
+            font-size: 30px;
+            color: white;
+            display: none;
+            cursor: pointer;
+        }
+        #check {
+            display: none;
+        }
+        @media (max-width: 952px) {
+            label.logo {
+                font-size: 30px;
+            }
+            nav ul li a {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 852px) {
+            .checkbtn {
+                display: block;
+            }
+            nav ul {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #2c3e50;
+                top: 80px;
+                left: -100%;
+                transition: all .5s;
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                display: block;
+                line-height: 30px;
+                margin: 50px 0;
+            }
+            nav ul li a {
+                font-size: 20px;
+            }
+            #check:checked ~ ul {
+                left: 0;
+            }
+        }
+        main {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        main h2 {
+            color: #333;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+        main p {
+            margin-bottom: 15px;
+        }
+        main ul {
+            margin-bottom: 15px;
+        }
+        main li {
+            margin-bottom: 8px;
+        }
+        main ol {
+            counter-reset: item;
+        }
+        main ol li {
+            counter-increment: item;
+            margin-bottom: 15px;
+        }
+        main ol li h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        main ol li p {
+            margin-bottom: 10px;
+        }
+        main ol li::before {
+            content: counter(item) ".";
+            font-weight: bold;
+            font-size: 18px;
+            margin-right: 5px;
+            color: #0082e6;
+        }
+        main ol li:last-child {
+            margin-bottom: 0;
+        }
+        footer {
+    background-color:gray;
+    padding: 20px;
+    text-align: center;
+    clear:both;
+    max-width:800px;
+    margin:0 auto;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333;
+    margin: 5px;
+    font-size: 14px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+  footer p {
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Index.html">
+                <div class="logo-container">
+                    <img src="logo.png" alt="logo">
+                    <label class="logo">VERIXO</label>
+                </div>
+            </a>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">&#9776;</label>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="signin.html">Login</a></li>
+                <li><a href="contact.html"> Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <center><h1>FAQs</h1></center>
+        <div class="content">
+            <h2>Account Activation Fee?</h2>
+            <p>To maintain a high-quality user base and ensure that our advertising partners receive genuine engagement, we require a one-time account activation fee of 500 PKR.</p>
+            <p>This fee helps us to:</p>
+            <ul>
+                <li>Filter out non-serious users</li>
+                <li>Reduce the risk of fraudulent activities</li>
+                <li>Ensure that those who join our platform are committed to actively participating in our ad-viewing program</li>
+            </ul>
+            <p>By charging this nominal fee, we can provide a better experience for both our users and advertisers, leading to higher earnings and more valuable opportunities for everyone involved.</p>
+        </div>
+
+        <div class="content">
+            <h2>Why Get Paid for Watching Ads?</h2>
+            <ol>
+                <li>
+                    <h2>Value Exchange Model</h2>
+                    <p>Advertisers need to reach potential customers, and viewers' attention has intrinsic value. Paying users for their time creates a value exchange where advertisers pay for the guaranteed attention of their target audience.</p>
+                </li>
+                <li>
+                    <h2>Increased Engagement</h2>
+                    <p>Incentivizing users to watch ads can significantly increase engagement on the platform. When users know they can earn money or rewards by watching ads, they are more likely to spend time on the platform, which can lead to more exposure to additional content and ads.</p>
+                </li>
+                <li>
+                    <h2>Targeted Advertising</h2>
+                    <p>Platforms can offer personalized ads based on users' preferences and behavior. Paying users for their attention ensures that they watch ads that are relevant to them, increasing the effectiveness of the ads and the likelihood of conversions for advertisers.</p>
+                </li>
+                <li>
+                    <h2>Data Collection and Insights</h2>
+                    <p>By offering incentives, platforms can collect valuable data about user behavior, preferences, and engagement with different types of ads. This data can be used to optimize future ad campaigns, making them more efficient and effective.</p>
+                </li>
+                <li>
+                    <h2>Loyalty and Retention</h2>
+                    <p>Paying users for watching ads can build loyalty and encourage users to return to the platform regularly. This increases user retention and builds a steady audience base, which is attractive to advertisers.</p>
+                </li>
+                <li>
+                    <h2>Competitive Advantage</h2>
+                    <p>Offering payment for ad viewing can set a platform apart from competitors. Users may prefer a platform where they can earn money or rewards over one where they passively watch ads without any benefit, leading to increased user acquisition.</p>
+                </li>
+                <li>
+                    <h2>Boosting Revenue Streams</h2>
+                    <p>For the platform, this model can create a new revenue stream. By attracting more users and increasing ad views, platforms can charge advertisers higher rates due to the guaranteed engagement and larger audience size.</p>
+                </li>
+                <li>
+                    <h2>Encouraging Longer Sessions</h2>
+                    <p>Incentives can encourage users to stay longer on the platform. Longer session times mean more opportunities to show ads and generate revenue. This can also positively impact the platform's metrics, making it more appealing to advertisers.</p>
+                </li>
+                <li>
+                    <h2>Creating a Positive User Experience</h2>
+                    <p>When users are compensated for watching ads, it can mitigate the often negative experience associated with advertising. Users might view ads more positively when they know there is a direct benefit to them, enhancing overall user satisfaction.</p>
+                </li>
+            </ol>
+        </div>
+    </main>
+
+    <footer>
+        <div class="font" style="font-size: 30px; padding: 10px;">
+            <a href="community.html">Community</a><br>
+            <a href="terms.html">Terms And Uses</a><br>
+            <a href="policy.html">Privacy Policy</a><br>
+            <a href="contact.html">Contact Us</a><br>
+        </div>
+        <div class="fo" style="font-size: 10px;">
+            © All Right Reserved
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+   
+        nav {
+            background: gray;
+            height: 80px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-container img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+        label.logo {
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        nav ul {
+            display: flex;
+            margin-right: 20px;
+        }
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+        nav ul li a {
+            color: white;
+            font-size: 17px;
+            text-transform: uppercase;
+            border-radius: 3px;
+            padding: 5px 10px;
+        }
+        a:hover {
+            background: white;
+            color: #0082e6;
+            transition: .5s;
+        }
+        .checkbtn {
+            font-size: 30px;
+            color: white;
+            display: none;
+            cursor: pointer;
+        }
+        #check {
+            display: none;
+        }
+        @media (max-width: 952px) {
+            label.logo {
+                font-size: 30px;
+            }
+            nav ul li a {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 852px) {
+            .checkbtn {
+                display: block;
+            }
+            nav ul {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #2c3e50;
+                top: 80px;
+                left: -100%;
+                transition: all .5s;
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                display: block;
+                line-height: 30px;
+                margin: 50px 0;
+            }
+            nav ul li a {
+                font-size: 20px;
+            }
+            #check:checked ~ ul {
+                left: 0;
+            }
+        }
+    footer {
+    background-color:gray;
+    padding: 20px;
+    text-align: center;
+    clear:both;
+    max-width:800px;
+    margin:0 auto;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333;
+    margin: 5px;
+    font-size: 14px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+  footer p {
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+}
+/* General styles for main content */
+main {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.contact-info ul {
+    margin-top: 15px;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-info ul li strong {
+    font-weight: bold;
+}
+
+.contact-info ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info ul li a:hover {
+    text-decoration: underline;
+}
+
+.contact-methods h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.contact-methods p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.address {
+    margin-bottom: 30px;
+}
+
+.address h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.address p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.address address {
+    font-style: normal;
+}
+
+.feedback-form {
+    margin-bottom: 30px;
+}
+
+.feedback-form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.feedback-form p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.feedback-form textarea {
+    width: 100%;
+    height: 150px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.feedback-form input[type="submit"] {
+    margin-top: 10px;
+    padding: 8px 20px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.social-media {
+    margin-bottom: 30px;
+}
+
+.social-media h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.social-media p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.social-media ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    padding-left: 0;
+}
+
+.social-media ul li {
+    margin: 0 10px;
+}
+
+.social-media ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.social-media ul li a:hover {
+    text-decoration: underline;
+}
+
+.newsletter h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .feedback-form textarea {
+        height: 120px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .feedback-form input[type="submit"] {
+        padding: 6px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-info ul li strong {
+        display: block;
+        margin-bottom: 5px;
+    }
+} {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <script>
+        
+    </script>
+    <header>
+        <nav>
+            <a href="Index.html">
+                <div class="logo-container">
+                    <img src="logo.png" alt="logo">
+                    <label class="logo">VERIXO</label>
+                </div>
+            </a>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">&#9776;</label>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="signin.html">Login</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <h1>Contact Us</h1>
+
+    <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>Have a question, feedback, or need assistance? We're here to help! Reach out to our dedicated support team through the following channels:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:support@verixo.com">support@verixo.com</a></li>
+            <li><strong>Phone:</strong> +1 (555) 123-4567</li>
+        </ul>
+    </div>
+
+    <div class="contact-methods">
+        <h3>Customer Support</h3>
+        <p>Our customer support team is available to assist you with any questions or issues you may have. Whether it's troubleshooting, account assistance, or general inquiries, we're here to ensure your experience with Verixo is smooth and rewarding.</p>
+    </div>
+
+    <div class="address">
+        <h3>Headquarters</h3>
+        <p>Visit us or send mail to our headquarters:</p>
+        <address>
+            Verixo Inc.<br>
+            123 Ad Street,<br>
+            Cityville, State, ZIP Code,<br>
+            Country
+        </address>
+    </div>
+
+    <div class="feedback-form">
+        <h3>Feedback Form</h3>
+        <p>Your feedback matters! Share your thoughts, suggestions, or inquiries with us through our convenient online form. We value your input and strive to respond promptly to every message we receive.</p>
+        <!-- Insert feedback form HTML code here -->
+    </div>
+
+    <div class="social-media">
+        <h3>Stay Connected</h3>
+        <p>Stay updated with Verixo news, product updates, and promotions by subscribing to our newsletter. Follow us on social media for the latest announcements and engaging content.</p>
+        <p>Social Media Links:</p>
+        <ul>
+            <li><a href="https://twitter.com/verixo">Twitter</a></li>
+            <li><a href="https://facebook.com/verixo">Facebook</a></li>
+        </ul>
+    </div>
+
+    <div class="newsletter">
+        <h3>Join Our Newsletter</h3>
+        <p>Subscribe to our newsletter to receive updates and special offers:</p>
+        <!-- Insert newsletter subscription form HTML code here -->
+    </div>
+</main>
+    <!-- Your main content section goes here -->
+
+    <footer>
+       <div class="font" style="font-size:30px;padding:10px;"> <a href="community.html">Community</a><br>
+        <a href="terms.html">Terms And Uses</a><br>
+        <a href="policy.html">Privacy Policy</a><br>
+        <a href="contact.html">Contact Us</a><br></div>
+      <div class="fo" style="font-size:10px;"> ©All Right Reserve
+        </div>
+    </footer>
+</body>
+</html>

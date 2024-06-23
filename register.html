@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+   
+        nav {
+            background: gray;
+            height: 80px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-container img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+        label.logo {
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        nav ul {
+            display: flex;
+            margin-right: 20px;
+        }
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+        nav ul li a {
+            color: white;
+            font-size: 17px;
+            text-transform: uppercase;
+            border-radius: 3px;
+            padding: 5px 10px;
+        }
+        a:hover {
+            background: white;
+            color: #0082e6;
+            transition: .5s;
+        }
+        .checkbtn {
+            font-size: 30px;
+            color: white;
+            display: none;
+            cursor: pointer;
+        }
+        #check {
+            display: none;
+        }
+        @media (max-width: 952px) {
+            label.logo {
+                font-size: 30px;
+            }
+            nav ul li a {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 852px) {
+            .checkbtn {
+                display: block;
+            }
+            nav ul {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #2c3e50;
+                top: 80px;
+                left: -100%;
+                transition: all .5s;
+                flex-direction: column;
+                align-items: center;
+                z-index: 1; /* Added z-index */
+            }
+            nav ul li {
+                display: block;
+                line-height: 30px;
+                margin: 50px 0;
+            }
+            nav ul li a {
+                font-size: 20px;
+            }
+            #check:checked ~ ul {
+                left: 0;
+            }
+            /* Adjusted margin for form when menu is open */
+            #check:checked ~ form {
+                margin-top: 100vh;
+            }
+        }
+
+        /* Unique Form Styling */
+        form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 90%;
+            margin: 100px auto 20px;
+            transition: transform 0.3s ease-in-out, margin-top 0.3s ease-in-out; /* Added transition for margin-top */
+            transform-style: preserve-3d;
+            z-index: 0; /* Ensure form is below the menu */
+        }
+        form:hover {
+            transform: rotateY(10deg);
+        }
+        form fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+        form legend {
+            font-size: 24px;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s ease-in-out;
+        }
+        form input[type="text"]:focus,
+        form input[type="email"]:focus,
+        form input[type="password"]:focus {
+            border-color: #1abc9c;
+            outline: none;
+        }
+        .password-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .password-container input {
+            width: calc(100% - 40px);
+            padding-right: 40px; /* Space for the toggle icon */
+        }
+        .password-toggle {
+            position: absolute;
+            right: 10px;
+            top: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #1abc9c;
+            transition: color 0.3s ease-in-out;
+        }
+        .password-toggle:hover {
+            color: #16a085;
+        }
+        form button {
+            background-color: #1abc9c;
+            color: #fff;
+            border: none;
+            padding: 14px 20px;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            margin-top: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        form button:hover {
+            background-color: #16a085;
+        }
+        form button:active {
+            background-color: #1abc9c;
+            transform: translateY(2px);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Index.html">
+                <div class="logo-container">
+                    <img src="logo.png" alt="logo">
+                    <label class="logo">VERIXO</label>
+                </div>
+            </a>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">&#9776;</label>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="signin.html">Login</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form onsubmit="handleFormSubmit(event)">
+        <fieldset>
+            <legend>Sign Up:</legend>
+
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+     
+        </fieldset>
+        <button type="submit"  >Sign Up</button>
+    </form>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Simulate loading effect for 3 seconds
+            document.querySelector('button[type="submit"]').textContent = 'Loading...';
+            setTimeout(function() {
+                window.location.href = 'verify.html'; // Redirect to dashboard page after 3 seconds
+            }, 3000); // 3000 milliseconds = 3 seconds
+        }
+
+        function togglePasswordVisibility(id) {
+            const passwordField = document.getElementById(id);
+            const toggleText = passwordField.nextElementSibling;
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                toggleText.textContent = 'Hide';
+            } else {
+                passwordField.type = 'password';
+                toggleText.textContent = 'Show';
+            }
+        }
+    </script>
+</body>
+</html>

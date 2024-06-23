@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home~VERIXO</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+   
+        nav {
+            background: gray;
+            height: 80px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-container img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+        label.logo {
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        nav ul {
+            display: flex;
+            margin-right: 20px;
+        }
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+        nav ul li a {
+            color: white;
+            font-size: 17px;
+            text-transform: uppercase;
+            border-radius: 3px;
+            padding: 5px 10px;
+        }
+        a:hover {
+            background: white;
+            color: #0082e6;
+            transition: .5s;
+        }
+        .checkbtn {
+            font-size: 30px;
+            color: white;
+            display: none;
+            cursor: pointer;
+        }
+        #check {
+            display: none;
+        }
+        @media (max-width: 952px) {
+            label.logo {
+                font-size: 30px;
+            }
+            nav ul li a {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 852px) {
+            .checkbtn {
+                display: block;
+            }
+            nav ul {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #2c3e50;
+                top: 80px;
+                left: -100%;
+                transition: all .5s;
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                display: block;
+                line-height: 30px;
+                margin: 50px 0;
+            }
+            nav ul li a {
+                font-size: 20px;
+            }
+            #check:checked ~ ul {
+                left: 0;
+            }
+        }
+
+        main {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+        main h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        main p {
+            color: #34495e;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        main h3 {
+            text-align: center;
+            margin-top: 30px;
+        }
+        main button {
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            margin: 20px auto;
+        }
+        main button:hover {
+            background-color: #16a085;
+        }
+       footer {
+    background-color:gray;
+    padding: 20px;
+    text-align: center;
+    clear:both;
+    max-width:800px;
+    margin:0 auto;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333;
+    margin: 5px;
+    font-size: 14px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+  footer p {
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+}
+ 
+   
+ </style>
+</head>
+<body>
+    <header>
+        <nav>
+           <a href="Index.html">        <div class="logo-container">
+                <img src="logo.png" alt="logo">
+                <label class="logo">VERIXO</label>
+            </div></a>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">&#9776;</label>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="signin.html">Login</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section style="font-family: Arial, sans-serif; text-align: center; background-color: #f0f8ff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); margin: 20px; max-width: 800px; margin: auto;">
+        <h1 style="color: #2c3e50;">Welcome to Verixo</h1>
+        <p style="color: #34495e; font-size: 18px; line-height: 1.6;">
+            Earn money by watching ads with Verixo! Our platform offers a simple and flexible way to make extra income. Sign up, watch targeted advertisements, and receive payments directly to your account. Join Verixo today and turn your spare time into cash effortlessly!
+        </p>
+        <br>
+        <button onclick="window.location.href='signin.html'" style="background-color: #1abc9c; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">
+            Login
+        </button>
+    </section>
+    <main>
+        <h1>Earn With Ads</h1>
+        <p>Verixo is revolutionizing the way people can earn money online by providing a simple yet effective platform where users can earn money just by watching ads. Our mission is to create a win-win situation for both advertisers and viewers, making advertising more engaging and rewarding.</p>
+        <p>At Verixo, we understand the value of your time and effort. That’s why we've designed a user-friendly platform where you can effortlessly earn extra income. Here’s how it works: once you sign up, you gain access to a variety of targeted advertisements tailored to your interests and preferences. By watching these ads, you accumulate earnings that can be transferred directly to your account.</p>
+        <p>The process is straightforward and hassle-free. After creating your account, you can start watching ads immediately. Each ad you view adds to your earnings, and the more ads you watch, the more you earn. Payments are processed efficiently, ensuring you receive your money without unnecessary delays.</p>
+        <p>One of the key features of Verixo is its flexibility. Whether you have a few minutes to spare during a break or a couple of hours in the evening, you can watch ads at your convenience. There are no strict schedules or commitments, allowing you to earn on your own terms.</p>
+        <p>Moreover, Verixo ensures that the advertisements you watch are relevant to your interests, making the experience more enjoyable. This targeted approach not only benefits viewers by showing them content they care about but also helps advertisers reach the right audience, making their campaigns more effective.</p>
+        <p>Verixo also places a strong emphasis on security and privacy. Your personal information is safeguarded with advanced security measures, and we are committed to maintaining a transparent and trustworthy platform.</p>
+        <p>Join Verixo today and start turning your spare time into cash. Whether you’re looking to supplement your income, save for a goal, or simply make the most of your free time, Verixo offers an easy and rewarding way to achieve your financial objectives. Sign up now and experience the future of online earning with Verixo!</p>
+        <h3>Login Here:</h3><br>
+        <center><button onclick="window.location.href='signin.html'" style="background-color: #1abc9c; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">
+            Login
+        </button></center>
+    </main>
+    <footer>
+       <div class="font" style="font-size:30px;padding:10px;"> <a href="community.html">Community</a><br>
+        <a href="terms.html">Terms And Uses</a><br>
+        <a href="policy.html">Privacy Policy</a><br>
+        <a href="contact.html">Contact Us</a><br></div>
+      <div class="fo" style="font-size:10px;"> ©All Right Reserve
+        </div>
+    </footer>
+    <script>
+        
+    </script>
+</body>
+</html>

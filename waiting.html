@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Status</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000000;
+            font-family: 'Arial', sans-serif;
+            color: #ffffff;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            max-width: 500px;
+            width: 100%;
+        }
+        .message {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+        .important {
+            color: #ff0000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">Your payment is pending approval.</div>
+        <div class="message">Please wait 48 hours for our team to activate your account.</div>
+        <div class="message important">Please do not go back or close this tab as this may affect your payment.</div>
+    </div>
+</body>
+</html>

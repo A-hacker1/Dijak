@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            overflow-y: hidden; /* Prevent vertical scroll */
+        }
+        header {
+            background-color: #333333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom-left-radius: 20px; /* Rounded corners for header */
+            border-bottom-right-radius: 20px;
+        }
+        header img {
+            height: 50px;
+            width: auto;
+            margin-right: 10px;
+            border-radius: 50%; /* Make the logo rounded */
+        }
+        header h3 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .menu-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 60%;
+            background-color: #808080;
+            transform: translateX(-100%);
+            transition: transform 0.4s ease;
+            z-index: 1000;
+            overflow-y: auto; /* Enable scrolling if needed */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .menu-container.open {
+            transform: translateX(0);
+        }
+        nav {
+            padding: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #00bcd4;
+        }
+        .material-icon {
+            font-family: 'Material Symbols Outlined', sans-serif;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .menu-icon {
+            cursor: pointer;
+        }
+        .dashboard {
+            padding: 20px;
+            color: white;
+            overflow-y: auto;
+            max-height: calc(100vh - 100px);
+        }
+        .overview-item {
+            background-color: #444;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .overview-item h2 {
+            margin-top: 0;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .button {
+            background-color: #00bcd4;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0097a7;
+        }
+        .chart-container {
+            width: 100%;
+            height: 300px;
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .chart-container canvas {
+            width: 100%;
+            height: 100%;
+        }
+        .profile-section {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #555;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .profile-section img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .profile-section .user-info {
+            display: flex;
+            flex-direction: column;
+            color: white;
+        }
+        .profile-section .user-info .username {
+            font-size: 18px;
+            font-weight: normal;
+            margin-bottom: 5px;
+        }
+        .profile-section .user-info .status {
+            background-color: red;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 5px;
+            font-size: 14px;
+            text-align: center;
+            width: fit-content;
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+</head>
+<body>
+    <header>
+        <a href="dash.html"> <img src="logo.png" alt="Logo"></a>
+        <a href="dash.html"> <h3>VERIXO</h3></a>
+        <span class="material-icon menu-icon" onclick="toggleNav()">menu_open</span>
+    </header>
+    <main>
+        <div class="dashboard">
+            <h1>Account Overview</h1>
+            <div class="overview-item">
+                <h2>Earnings</h2>
+                <p>$0</p>
+            </div>
+            <div class="overview-item">
+                <h2>Earning Stats</h2>
+                <div class="chart-container">
+                    <canvas id="earningsChart"></canvas>
+                </div>
+            </div>
+            <div class="overview-item">
+                <h2>Referral Information</h2>
+                <p>No Refers</p>
+            </div>
+            <div class="overview-item">
+                <h2>Task Listings</h2>
+                <p>90 ads for $19.78 (5506.93 PKR)</p>
+                <p>1 ad for 0.22 PKR</p>
+                <a href="ads.html" class="button">Watch Ads</a>
+            </div>
+            <div class="buttons">
+                <a href="why.html" class="button">FAQs</a>
+                <a href="setting.html" class="button">Profile Settings</a>
+            </div>
+        </div>
+    </main>
+    <div class="menu-container" id="menuContainer">
+        <nav>
+            <div class="profile-section">
+                <img src="profile.png" alt="Profile">
+                <div class="user-info">
+                    <div class="username">Gold-User756</div>
+                    <div class="status">Inactive</div>
+                </div>
+            </div>
+            <ul>
+                <li><span class="material-icon">dashboard</span><a href="#">Dashboard</a></li>
+                <li><span class="material-icon">ads_click</span><a href="ads.html">Watch Ads</a></li>
+                <li><span class="material-icon">account_balance_wallet</span><a href="earn.html">My Earning</a></li>
+                <li><span class="material-icon">currency_exchange</span><a href="cash.html">Withdraw/Cashout</a></li>
+                <li><span class="material-icon">switches</span><a href="activate.html">Activate My Account</a></li>
+                <li><span class="material-icon">settings</span><a href="setting.html">Setting</a></li>
+                <li><span class="material-icon">person_add</span><a href="signup.html">Create New Account</a></li>
+                <li><a href="why.html"><span class="material-symbols-outlined">view_in_ar</span>Some Questions and Answers About VERIXO</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        function toggleNav() {
+            var menuContainer = document.getElementById("menuContainer");
+            menuContainer.classList.toggle("open");
+        }
+
+        // Function to get the last 4 months and the current month
+        function getLastFiveMonths() {
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const today = new Date();
+            const currentMonth = today.getMonth();
+            const lastFiveMonths = [];
+
+            for (let i = 4; i >= 0; i--) {
+                let monthIndex = currentMonth - i;
+                if (monthIndex < 0) {
+                    monthIndex += 12;
+                }
+                lastFiveMonths.push(months[monthIndex]);
+            }
+            return lastFiveMonths;
+        }
+
+        // Setup for the earnings chart
+        const ctx = document.getElementById('earningsChart').getContext('2d');
+    const earningsChart = new Chart(ctx, {
+        type: 'line', // Change to the type of chart you prefer
+        data: {
+            labels: getLastFiveMonths(), // Last 4 months and the current month
+            datasets: [{
+                label: 'Earnings Over Time',
+                data: [0, 0, 0, 0, 0], // Example data with 0 earnings
+                borderColor: 'rgba(0, 188, 212, 1)',
+                backgroundColor: 'rgba(0, 188, 212, 0.2)',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        color: 'white' // Color of the label text
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: {
+                        color: 'white' // Color of the x-axis labels
+                    }
+                },
+                y: {
+                    ticks: {
+                        color: 'white' // Color of the y-axis labels
+                    }
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>
